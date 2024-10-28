@@ -1,0 +1,633 @@
+@import url(global.css);
+@import url(../Fonts/WEB/css/clash-display.css);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    font-family: 'ClashDisplay-Regular', sans-serif;
+    font-weight: 400;
+
+}
+
+.hero {
+    background-image: url("../img/background.svg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.hero .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 4.5rem;
+    align-items: center;
+}
+
+.hero .navbar .navs ul {
+    display: flex;
+    list-style: none;
+}
+
+.hero .navbar .navs ul li {
+    padding: 0 1.5rem;
+}
+
+.hero .navbar .navs ul li a {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* home  */
+.hero .home {
+    padding-top: 8rem;
+    height: 81vh;
+}
+
+.hero .home .home1 {
+    width: 242px;
+    background: #1C1D20;
+    padding: 0.5rem 1.9rem 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-right-radius: 56px;
+    border-bottom-right-radius: 56px;
+}
+
+.hero .home .home1 .globe {
+    font-size: 29px;
+    padding: 0.8rem 1rem;
+    background: #16111e;
+    border-radius: 50%;
+}
+
+.hero .home .home2 {
+    display: flex;
+    justify-content: right;
+    padding-right: 3rem;
+}
+
+.hero .home .home2 p {
+    display: flex;
+    flex-direction: column;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.hero .home .home3 {
+    padding-left: 3rem;
+}
+
+.hero .home .home3 p {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.hero .home .home3 h4 {
+    font-size: 90px;
+    line-height: 110px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.hero .home .home3 h4 span {
+    color: var(--text-color);
+}
+
+/* about  */
+.hero .about,
+.hero .s-works,
+.hero .journey,
+.hero .testimonial,
+.hero .contact {
+    background-color: var(--background_color);
+    /* background: #0c0c0c;
+    background: radial-gradient(ellipse at top right, #1d1421 60%, #0c0c0c 100%); */
+}
+
+.hero .about {
+    padding: 3.5rem 6.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5.5rem;
+}
+
+.hero .about .about_text {
+    display: grid;
+    gap: 2rem;
+}
+
+.hero .about .about_text p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24.6px;
+    color: rgba(220, 220, 220, 0.5);
+}
+
+.hero .about .about_box h6 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.52px;
+    padding-bottom: 2rem;
+}
+
+.hero .about .about_box .about_boxes {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #131214;
+    gap: 0.5rem;
+}
+
+.hero .about .about_box .about_boxes p {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 22px;
+    padding: 8px 19px;
+    color: rgba(220, 220, 220, 0.5);
+}
+
+.hero .about .about_box .about_boxes .first {
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+/* work  */
+.hero .s-works,
+.hero .journey,
+.hero .testimonial,
+.hero .contact {
+    padding: 1.5rem 6.5rem;
+}
+
+.hero .s-works h6 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.52px;
+}
+
+.hero .s-works .work_box,
+.hero .journey .journey_box,
+.hero .testimonial .testimonial-box {
+    padding: 4rem 0;
+}
+
+.hero .s-works .work_box .work_boxs {
+    padding: 3rem 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero .s-works .work_box .work_boxs h4 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 59.04px;
+}
+
+.hero .s-works .work_box .work_boxs p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.6px;
+    color: rgba(220, 220, 220, 0.5);
+
+}
+
+
+
+/* .mouse-pos-list-image{
+    border-radius: 0;
+    width: clamp(10em, 27.5vw, 25em);
+    transition: width .4s cubic-bezier(0.34, 1, 0.64, 1);
+} */
+
+.mouse-pos-list-image,
+.mouse-pos-list-btn,
+.mouse-pos-list-span,
+.mouse-pos-list-span-big {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mouse-pos-list-image.active,
+.mouse-pos-list-btn.active,
+.mouse-pos-list-span.active,
+.mouse-pos-list-span-big.active {
+    opacity: 1;
+}
+
+.mouse-pos-list-btn {
+    width: 30px;
+    height: 30px;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.mouse-pos-list-span,
+.mouse-pos-list-span-big {
+    background-color: rgba(104, 102, 102, 0.26);
+    border-radius: 50%;
+}
+
+.mouse-pos-list-span-big {
+    width: 100px;
+    height: 100px;
+}
+
+.mouse-pos-list-image .float-image-wrap {
+    width: 100px;
+    height: 100px;
+}
+
+.mouse-pos-list-image.active {
+    width: clamp(10em, 24.5vw, 25em);
+    transition: width 0.4s cubic-bezier(0.34, 1, 0.64, 1);
+}
+
+/* Hover effect for .s-works items */
+.s-works .work_box .work_boxs {
+    transition: all 0.3s ease-in-out;
+}
+
+.s-works .work_box .work_boxs:hover {
+    transform: translateX(20px);
+}
+
+.hero .work_img{
+    width: 100%;
+    display: none;
+}
+/* journey  */
+.hero .journey h6,
+.hero .testimonial h6 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.52px;
+}
+
+.hero .journey h5,
+.hero .testimonial h5 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 59.04px;
+
+
+}
+
+.hero .journey .journey_box .journey-b {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+.hero .journey .journey_box .journey-b .jour .jour-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.9rem;
+    gap: 2rem;
+}
+
+.hero .journey .journey_box .journey-b .jour .jour-b .jour-i .b {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.22px;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 1);
+}
+
+.hero .journey .journey_box .journey-b .jour .jour-b .jour-i p {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.68px;
+    padding: 0.2rem;
+}
+
+.hero .journey .journey_box .journey-b .text {
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.6px;
+    color: rgba(255, 255, 255, 0.5);
+
+
+}
+
+.mobile {
+    display: none;
+}
+
+/* testimonial  */
+.hero .testimonial .testimonial-box {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.hero .testimonial .testimonial-box .t-box {
+    display: flex;
+    align-items: center;
+    width: 35rem;
+    padding: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 19px;
+    gap: 28px;
+}
+
+.hero .testimonial .testimonial-box .t-box img {
+    border-radius: 8px;
+    /* width: 100%; */
+}
+
+.hero .testimonial .testimonial-box .t-box .t-text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.68px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.hero .testimonial .testimonial-box .t-box .t-text .name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.52px;
+    color: rgba(220, 220, 220, 1);
+    padding: 1.5rem 0 0.7rem 0;
+}
+
+/* contact  */
+.hero .contact .contact1 {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.hero .contact .contact1 div p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.52px;
+}
+
+.hero .contact .contact1 div .b {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 59.04px;
+    color: rgba(220, 220, 220, 1);
+}
+
+.hero .contact .contactss {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 9rem;
+}
+
+.hero .contact .contactss span {
+    font-size: 36px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.hero .contact .contact2 {
+    display: flex;
+    justify-content: right;
+    padding-right: 11rem;
+}
+
+.hero .contact .contact3 {
+    display: flex;
+    /* justify-content: center; */
+    padding-left: 2rem;
+    align-items: center;
+    gap: 19px;
+}
+
+.hero .contact .contact3 a {
+    text-decoration: none;
+}
+
+.hero .contact .contact3 a p {
+    border: 1.22px solid rgba(255, 255, 255, 0.3);
+    padding: 18.13px 33.04px 18.13px 33.04px;
+    border-radius: 35px;
+    font-size: 31.35px;
+    font-weight: 500;
+    line-height: 38.56px;
+    color: rgba(220, 220, 220, 1);
+}
+.hero .home .home4{
+    display: none;
+}
+@media screen and (max-width:1147px) {
+    .hero .contact .contactss {
+        padding-right: 2rem;
+    }
+
+    .hero .contact .contact2 {
+        padding-right: 3rem;
+    }
+
+    .hero .contact .contact3 {
+        flex-direction: column;
+    }
+    .hero .home{
+        padding-top: 7rem;
+        height: 85vh;
+    }
+}
+
+@media screen and (max-width:1091px) {
+    .hero .journey .journey_box .journey-b {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .mobile {
+        display: block;
+        padding: 2rem 0;
+        margin: auto;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width:943px) {
+    .hero .about .about_text {
+        gap: 0;
+    }
+
+    .hero .about {
+        gap: 2.5rem;
+    }
+    .hero .home {
+        /* padding-top: 8rem; */
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width:791px) {
+    .hero .testimonial .testimonial-box {
+        overflow: hidden;
+        grid-template-columns: auto;
+    }
+
+    .hero .testimonial .testimonial-box .t-box {
+        width: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width:751px) {
+    .hero .about {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width:567px) {
+
+    .hero .s-works,
+    .hero .journey,
+    .hero .testimonial,
+    .hero .contact {
+        padding: 1.5rem 2.5rem;
+    }
+
+    .mobile {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .hero .about {
+        padding: 3.5rem 2rem;
+    }
+
+    .hero .s-works .work_box .work_boxs {
+        padding: 3rem 0rem;
+    }
+
+    .hero .journey .journey_box .journey-b .jour .jour-b {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 0 0.9rem 0;
+    }
+
+    .hero .contact .contactss {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero .contact .contact2 {
+        padding-right: 9rem;
+        padding-bottom: 1rem;
+    }
+
+    .hero .contact .contact3 a p {
+
+        font-size: 26.35px;
+    }
+
+    .hero .navbar {
+        padding: 0.5rem 2.5rem;
+    }
+
+    .hero .home .home3 h4 {
+        font-size: 74px;
+        line-height: 74px;
+
+    }
+    .hero .home .home2, .home .home1{
+        display: none !important;
+    }
+    .hero .home .home4{
+        display: block;
+    }
+
+    .hero .home .home4 p{
+        font-family: Inter;
+font-size: 20.37px;
+font-weight: 500;
+line-height: 30.42px;
+padding-left: 3rem;
+
+    }
+    .hero .home .home4 p i{
+        display: block;
+    }
+    .hero .work_img{
+        display: block;
+    }
+    .hero .s-works .work_box .work_boxs h4 {
+font-size: 31.54px;
+font-weight: 400;
+line-height: 38.8px;
+    }
+    .mouse-pos-list-image{
+        display: none;
+    }
+}
+
+@media screen and (max-width:410px) {
+    
+    .hero .home .home3 h4 {
+        font-size: 63px;
+        line-height: 74px;
+    }
+
+    .hero .contact .contact1 div .b {
+        font-size: 27px;
+    }
+
+    .hero .contact .contact1 div p {
+        font-size: 15.02px;
+    }
+    .hero .navbar {
+        padding: 0.5rem 1rem;
+    }
+    .email{
+        font-size: 18px !important;
+    }
+    .hero .contact .contact3{
+        padding-left: 0;
+    }
+    .hero .contact .contactss span{
+        padding-left: 14rem;
+    }
+    .hero .contact .contact2{
+        padding-right: 1rem;
+    }
+    .hero .testimonial .testimonial-box .t-box img {
+        
+        width: 100%;
+    }
+}
+@media screen and (max-width: 380px) {
+    .hero .testimonial .testimonial-box .t-box{
+        padding: 20px 13px;
+    }
+    .hero .navbar .navs ul li{
+        padding: 0 0.5rem;
+    }
+}

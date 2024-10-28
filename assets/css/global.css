@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Clash Display Variable';
+    src: url('fonts/ClashDisplayVariable.woff2') format('woff2'),
+         url('fonts/ClashDisplayVariable.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  :root{
+    --text-color: rgba(220, 220, 220, 0.8);
+    --font-weight:500;
+    --background_color: #0C0C0C;
+
+}
